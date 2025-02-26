@@ -1,0 +1,42 @@
+version: "3.9"
+
+services:
+  
+  mssql:
+    container_name: mssql
+    image: mcr.microsoft.com/mssql/server
+    ports:
+      - "1433:1433"
+    environment:
+      SA_PASSWORD: "!MyStrongPassword"
+      ACCEPT_EULA: "Y"
+    healthcheck:
+      test: /opt/mssql-tools/bin/sqlcmd -S mssql -U sa -P "$$SA_PASSWORD" -Q "SELECT 1" || exit 1
+  
+  rabbitmq:
+    container_name: rabbitmq
+    image: rabbitmq:3-management-alpine
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+    environment:
+      RABBITMQ_DEFAULT_USER: "guest"
+      RABBITMQ_DEFAULT_PASS: "guest"
+      RABBITMQ_DEFAULT_VHOST: "blog"
+    healthcheck:
+      test: rabbitmq-diagnostics -q ping
+
+  mongodb:
+    container_name: mongodb
+    image: mongo:5.0.14
+    ports:
+      - "27017:27017"
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: "mongoadmin"
+      MONGO_INITDB_ROOT_PASSWORD: "secret"
+    healthcheck:
+      test: ["CMD", "mongosh", "--eval", "db.adminCommand('ping')"]
+      interval: 10s
+      timeout: 5s
+      retries: 3
+      start_period: 5s

@@ -1,0 +1,65 @@
+<Project>
+  <PropertyGroup Label="Common properties">
+    <Product>Blog</Product>
+    <Copyright>Copyright (c) 2025 Matheus Rodrigues Del Re.</Copyright>
+    <Authors>Matheus Rodrigues Del Re.</Authors>
+    <TargetFramework>net8.0</TargetFramework>
+    <LangVersion>preview</LangVersion>
+    <EnablePreviewFeatures>true</EnablePreviewFeatures>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+    <ManagePackageVersionsCentrally>true</ManagePackageVersionsCentrally>
+  </PropertyGroup>
+  <ItemGroup Label="Packages">
+    <!--AutoFixture-->
+    <PackageVersion Include="AutoFixture" Version="4.18.1" />
+    <PackageVersion Include="AutoFixture.Xunit2" Version="4.18.1" />
+    <!--Ardalis.SmartEnum-->
+    <PackageVersion Include="Ardalis.SmartEnum" Version="8.2.0" />
+    <PackageVersion Include="Ardalis.SmartEnum.AutoFixture" Version="8.1.0" />
+    <!--CorrelationId-->
+    <PackageVersion Include="CorrelationId" Version="3.0.1" />
+    <!--coverlet-->
+    <PackageVersion Include="coverlet.collector" Version="6.0.4" />
+    <!--FluentAssertions-->
+    <PackageVersion Include="FluentAssertions" Version="8.1.1" />
+    <!--FluentValidation-->
+    <PackageVersion Include="FluentValidation" Version="11.11.0" />
+    <PackageVersion Include="FluentValidation.AspNetCore" Version="11.3.0" />
+    <PackageVersion Include="FluentValidation.DependencyInjectionExtensions" Version="11.11.0" />
+    <!--JsonNet-->
+    <PackageVersion Include="JsonNet.ContractResolvers" Version="2.0.0" />
+    <!--MassTransit-->
+    <PackageVersion Include="MassTransit.Abstractions" Version="8.3.6" />
+    <PackageVersion Include="MassTransit.Newtonsoft" Version="8.3.6" />
+    <PackageVersion Include="MassTransit.RabbitMQ" Version="8.3.6" />
+    <!--MicroElements.Swashbuckle-->
+    <PackageVersion Include="MicroElements.Swashbuckle.FluentValidation" Version="6.1.0" />
+    <PackageVersion Include="Microsoft.AspNetCore.Http.Abstractions" Version="2.3.0" />
+    <!--Microsoft-->
+    <PackageVersion Include="Microsoft.NET.Test.Sdk" Version="17.13.0" />
+    <!--Microsoft.EntityFrameworkCore-->
+    <PackageVersion Include="Microsoft.EntityFrameworkCore" Version="8.0.13" />
+    <PackageVersion Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.13" />
+    <PackageVersion Include="Microsoft.EntityFrameworkCore.Relational" Version="8.0.13" />
+    <PackageVersion Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.13" />
+    <!--Microsoft.Extensions-->
+    <PackageVersion Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="8.0.2" />
+    <PackageVersion Include="Microsoft.Extensions.Hosting" Version="8.0.1" />
+    <PackageVersion Include="Microsoft.Extensions.Http" Version="8.0.1" />
+    <PackageVersion Include="Microsoft.Extensions.Options.DataAnnotations" Version="8.0.0" />
+    <!--MongoDB-->
+    <PackageVersion Include="MongoDB.Driver" Version="3.2.1" />
+    <!--Newtonsoft-->
+    <PackageVersion Include="Newtonsoft.Json" Version="13.0.3" />
+    <!--Serilog-->
+    <PackageVersion Include="Serilog" Version="4.2.0" />
+    <PackageVersion Include="Serilog.AspNetCore" Version="8.0.3" />
+    <!--Swashbuckle-->
+    <PackageVersion Include="Swashbuckle.AspNetCore" Version="7.2.0" />
+    <!--xunit-->
+    <PackageVersion Include="xunit" Version="2.9.3" />
+    <PackageVersion Include="xunit.runner.visualstudio" Version="3.0.2" />
+  </ItemGroup>
+</Project>
