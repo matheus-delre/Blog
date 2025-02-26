@@ -33,8 +33,6 @@ As a **domain-centric** approach, [**Clean Architecture**](https://blog.cleancod
 
 # :computer: Running
 
-Projects may have different environments where the application runs: development, staging, production, etc. Usually, different environments should have different settings.
-
 [Docker](https://www.docker.com/why-docker/) makes it easy to set up that closely mirrors the production environment without having to install and configure all of the dependencies on your local
 machine. Especially useful for working on complex applications that rely on many different libraries and tools.
 
